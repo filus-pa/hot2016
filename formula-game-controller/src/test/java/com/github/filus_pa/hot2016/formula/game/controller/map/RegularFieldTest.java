@@ -19,7 +19,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  */
 @Test
 public class RegularFieldTest {
-	private Random random = new Random();
+	private final Random random = new Random();
 
 	public void shouldHaveVmaxAsSpeedLimitIfNotGiven() {
 		//given
@@ -208,7 +208,7 @@ public class RegularFieldTest {
 		assertThat(actualRightExit).as("Check right exit optionality").isNotPresent();
 	}
 
-	public void shouldReturnOptionaRightExitIfGiven() {
+	public void shouldReturnOptionalRightExitIfGiven() {
 		//given
 		final RegularField leftExit = new RegularField(0, null, null, null);
 		final RegularField forwardExit = new RegularField(4, null, null, null);
